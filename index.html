@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Smart Clock Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onclick="enableSound()">
+
+<div class="container">
+    <h1>⏰ Digital Clock</h1>
+
+    <div id="clock"></div>
+    <div id="date" class="date-box"></div>
+
+  <button id="modeBtn" onclick="toggleMode()">🌙 Dark Mode</button>
+
+    <h2>⏱ Stopwatch</h2>
+    <div class="stopwatch-box">
+        <div id="stopwatch">00:00:00</div>
+        <button onclick="startSW()">Start</button>
+        <button onclick="stopSW()">Stop</button>
+        <button onclick="resetSW()">Reset</button>
+    </div>
+
+    <h2>🔔 Alarm</h2>
+    <div class="alarm-box">
+        <input type="text" id="alarmTime" placeholder="HH:MM AM/PM">
+        <br><br>
+        <button onclick="setAlarm()">Set Alarm</button>
+        <button onclick="stopAlarm()">Stop Alarm</button>
+        <p id="alarmStatus"></p>
+    </div>
+</div>
+
+<audio id="alarmSound" src="alarm.mp3"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
